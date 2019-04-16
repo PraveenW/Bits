@@ -1,0 +1,501 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version I-2013.12-SP5 for RHEL32 -- Jul 20, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Information: As of the J-2014.09 version of dc_shell, the 32-bit
+             version of the product will not be delivered by default.
+             If you require a 32-bit version for any reason, please
+             contact Synopsys technical support.
+
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+read_verilog bits.v
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/wa/wali9257/fifo/bits.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/wa/wali9257/fifo/bits.v
+Warning:  Little argument or return value checking implemented for system task or function '$time'. (VER-209)
+$display output: 00 : I have only pushin0 and no reqin0 
+
+$display output: 00 : I have only reqin0 and no pushin0 
+
+$display output: 00 : I have both reqin0 and pushin0 but I'm not empty 
+
+$display output: 00 : I have both reqin0 and pushin0 and I'm empty and lenino=4'd0  
+
+$display output: 00 : I'm the else part 
+
+
+Inferred memory devices in process
+	in routine bits line 45 in file
+		'/home/wa/wali9257/fifo/bits.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lenin0_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     datain0_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pushin0_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     reqin0_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine bits line 68 in file
+		'/home/wa/wali9257/fifo/bits.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dataout_reg1_reg   | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mem_data1_reg    | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+|   pushout_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     wr_ptr_reg      | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     wr_ptr_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine bits line 160 in file
+		'/home/wa/wali9257/fifo/bits.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lenin01_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/wa/wali9257/fifo/bits.db:bits'
+Loaded 1 design.
+Current design is 'bits'.
+bits
+create_clock clk -name clk -period 3.75
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port clk]] [get_port rst]]
+{pushin datain[31] datain[30] datain[29] datain[28] datain[27] datain[26] datain[25] datain[24] datain[23] datain[22] datain[21] datain[20] datain[19] datain[18] datain[17] datain[16] datain[15] datain[14] datain[13] datain[12] datain[11] datain[10] datain[9] datain[8] datain[7] datain[6] datain[5] datain[4] datain[3] datain[2] datain[1] datain[0] reqin reqlen[3] reqlen[2] reqlen[1] reqlen[0]}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+1
+set_fix_hold [ get_clocks clk ]
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+1
+compile -map_effort high
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | I-2013.12-DWBB_201312.5 |     *     |
+| Licensed DW Building Blocks        | I-2013.12-DWBB_201312.5 |     *     |
+============================================================================
+
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'bits'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'bits'. (DDB-72)
+  Mapping 'DW_rightsh'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_rightsh'
+  Processing 'bits_DW01_sub_0'
+  Processing 'bits_DW01_sub_1'
+  Processing 'bits_DW01_add_0'
+  Mapping 'DW_rightsh'
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:29   62521.5      0.00      -0.0       0.0                                0.00
+    0:01:29   62521.5      0.00      -0.0       0.0                                0.00
+    0:01:29   62521.5      0.00      -0.0       0.0                                0.00
+    0:01:29   62521.5      0.00      -0.0       0.0                                0.00
+    0:01:30   62521.5      0.00      -0.0       0.0                                0.00
+    0:01:37   47950.5      2.15    2203.4       0.0                                0.00
+    0:01:42   47917.5      1.90    1950.7      89.4                                0.00
+    0:01:45   47930.0      1.39    1421.0       0.0                                0.00
+    0:01:46   47928.0      8.30    6931.5    5313.5                                0.00
+    0:01:48   47934.5      7.89    6494.0    5313.5                                0.00
+    0:01:49   47894.0      7.89    6367.4    4612.8                                0.00
+    0:01:50   47901.5      8.96    7413.9    5438.3                                0.00
+    0:01:51   47893.5      0.54     395.0       0.0                                0.00
+    0:01:51   47904.5      0.25      17.8       0.0                                0.00
+    0:01:52   47899.5      0.05       5.4       0.0                                0.00
+    0:01:52   47906.5      0.03       2.4       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:53   47907.0      0.00      -0.0       0.0                                0.00
+    0:01:54   47902.5      0.00      -0.0       0.0                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:55   47902.5      0.00       0.0       0.0                               -1.24
+    0:01:55   47919.5      0.00       0.0       0.0                                0.00
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:55   47919.5      0.00       0.0       0.0                                0.00
+    0:01:55   47919.5      0.00       0.0       0.0                                0.00
+    0:01:57   47901.0      0.00       0.0       0.0                                0.00
+    0:02:02   47887.5      0.00       0.0       0.0                                0.00
+    0:02:03   47879.0      0.00       0.0       0.0                                0.00
+    0:02:03   47871.0      0.00       0.0       0.0                                0.00
+    0:02:03   47866.0      0.00       0.0       0.0                                0.00
+    0:02:04   47860.5      0.00       0.0       0.0                                0.00
+    0:02:04   47855.0      0.00       0.0       0.0                                0.00
+    0:02:04   47849.5      0.00       0.0       0.0                                0.00
+    0:02:04   47844.0      0.00       0.0       0.0                                0.00
+    0:02:04   47839.0      0.00       0.0       0.0                                0.00
+    0:02:05   47835.5      0.00       0.0       0.0                                0.00
+    0:02:05   47832.5      0.00       0.0       0.0                                0.00
+    0:02:05   47829.5      0.00       0.0       0.0                                0.00
+    0:02:05   47826.0      0.00       0.0       0.0                                0.00
+    0:02:05   47823.0      0.00       0.0       0.0                                0.00
+    0:02:05   47820.0      0.00       0.0       0.0                                0.00
+    0:02:06   47820.0      0.00       0.0       0.0                                0.00
+    0:02:06   47820.0      0.00       0.0       0.0                                0.00
+    0:02:06   47793.0      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:06   47791.5      0.07      18.8       0.0                                0.00
+    0:02:07   47740.5      0.00       0.0       0.0                                0.00
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'bits' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1092 load(s), 1 driver(s)
+     Net 'net44716': 1035 load(s), 1 driver(s)
+1
+create_clock clk -name clk -period 5.0
+1
+update_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'bits' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+report_timing -max_paths 3
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : bits
+Version: I-2013.12-SP5
+Date   : Tue Feb 24 01:49:29 2015
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: wr_ptr_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mem_data1_reg[72]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  wr_ptr_reg[2]/CP (CFD2QXL)               0.00 #     0.00 r
+  wr_ptr_reg[2]/Q (CFD2QXL)                0.41       0.41 r
+  U6843/Z (CNIVX4)                         0.21       0.63 r
+  U5328/Z (CIVX4)                          0.07       0.70 f
+  U5589/Z (CNIVXL)                         0.53       1.23 f
+  U14258/Z (CMXI2X1)                       0.19       1.42 f
+  U5592/Z (CMXI2XL)                        0.22       1.64 r
+  U14259/Z (CMXI2X1)                       0.15       1.79 f
+  U14275/Z (CMX2X1)                        0.20       1.99 f
+  U5604/Z (CND2XL)                         0.10       2.10 r
+  U9340/Z (CNR2X1)                         0.09       2.19 f
+  U9339/Z (CEOX1)                          0.21       2.40 f
+  U25417/Z (CMX2X1)                        0.21       2.61 f
+  U25418/Z (CMXI2X1)                       0.14       2.75 r
+  U25595/Z (CMX2X1)                        0.18       2.93 r
+  U25950/Z (CMXI2X1)                       0.08       3.01 f
+  U6625/Z (CANR2XL)                        0.16       3.17 r
+  U12359/Z (CND3XL)                        0.11       3.28 f
+  mem_data1_reg[72]/D (CFD2QXL)            0.00       3.28 f
+  data arrival time                                   3.28
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.25       4.75
+  mem_data1_reg[72]/CP (CFD2QXL)           0.00       4.75 r
+  library setup time                      -0.22       4.53
+  data required time                                  4.53
+  -----------------------------------------------------------
+  data required time                                  4.53
+  data arrival time                                  -3.28
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: wr_ptr_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mem_data1_reg[200]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  wr_ptr_reg[2]/CP (CFD2QXL)               0.00 #     0.00 r
+  wr_ptr_reg[2]/Q (CFD2QXL)                0.41       0.41 r
+  U6843/Z (CNIVX4)                         0.21       0.63 r
+  U5328/Z (CIVX4)                          0.07       0.70 f
+  U5589/Z (CNIVXL)                         0.53       1.23 f
+  U14258/Z (CMXI2X1)                       0.19       1.42 f
+  U5592/Z (CMXI2XL)                        0.22       1.64 r
+  U14259/Z (CMXI2X1)                       0.15       1.79 f
+  U14275/Z (CMX2X1)                        0.20       1.99 f
+  U5604/Z (CND2XL)                         0.10       2.10 r
+  U9178/Z (CNR2X1)                         0.09       2.19 f
+  U9177/Z (CEOX1)                          0.21       2.40 f
+  U23612/Z (CMX2X1)                        0.21       2.61 f
+  U23613/Z (CMXI2X1)                       0.14       2.75 r
+  U23632/Z (CMX2X1)                        0.18       2.93 r
+  U23678/Z (CMXI2X1)                       0.08       3.01 f
+  U6313/Z (CANR2XL)                        0.16       3.17 r
+  U12225/Z (CND3XL)                        0.11       3.28 f
+  mem_data1_reg[200]/D (CFD2QXL)           0.00       3.28 f
+  data arrival time                                   3.28
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.25       4.75
+  mem_data1_reg[200]/CP (CFD2QXL)          0.00       4.75 r
+  library setup time                      -0.22       4.53
+  data required time                                  4.53
+  -----------------------------------------------------------
+  data required time                                  4.53
+  data arrival time                                  -3.28
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+  Startpoint: wr_ptr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mem_data1_reg[130]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  wr_ptr_reg[0]/CP (CFD2QX1)               0.00 #     0.00 r
+  wr_ptr_reg[0]/Q (CFD2QX1)                0.36       0.36 f
+  U5238/Z (CIVX2)                          0.10       0.46 r
+  U7972/Z (CNIVX1)                         0.40       0.85 r
+  U14076/Z (CMXI2X1)                       0.25       1.10 r
+  U14078/Z (CMXI2X1)                       0.13       1.23 f
+  U14185/Z (CMXI2X1)                       0.14       1.37 r
+  U5259/Z (CMX2X1)                         0.17       1.54 r
+  U13686/Z (CMXI2XL)                       0.10       1.64 f
+  U14187/Z (CMXI2X1)                       0.14       1.78 r
+  U14327/Z (CMX2X1)                        0.17       1.96 r
+  U5602/Z (CND2XL)                         0.11       2.07 f
+  U6849/Z (COR2X1)                         0.16       2.23 f
+  U6848/Z (CENX1)                          0.16       2.39 f
+  U23283/Z (CMX2X1)                        0.21       2.61 f
+  U23284/Z (CMXI2X1)                       0.14       2.75 r
+  U23316/Z (CMX2X1)                        0.18       2.93 r
+  U23356/Z (CMXI2X1)                       0.08       3.01 f
+  U6503/Z (CANR2XL)                        0.16       3.17 r
+  U12292/Z (CND3XL)                        0.11       3.28 f
+  mem_data1_reg[130]/D (CFD2QXL)           0.00       3.28 f
+  data arrival time                                   3.28
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.25       4.75
+  mem_data1_reg[130]/CP (CFD2QXL)          0.00       4.75 r
+  library setup time                      -0.22       4.53
+  data required time                                  4.53
+  -----------------------------------------------------------
+  data required time                                  4.53
+  data arrival time                                  -3.28
+  -----------------------------------------------------------
+  slack (MET)                                         1.25
+
+
+1
+write -hierarchy -format verilog -output bits_gates.v
+Writing verilog file '/home/wa/wali9257/fifo/bits_gates.v'.
+1
+quit
+
+Thank you...

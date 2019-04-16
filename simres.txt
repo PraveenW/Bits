@@ -1,0 +1,124 @@
+ncverilog: 14.10-p001: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+file: tbits.sv
+  t.randomize;
+            |
+ncvlog: *W,FUNTSK (tbits.sv,169|12): function called as a task without void'().
+	module worklib.test:sv
+		errors: 0, warnings: 1
+file: bits_gates.v
+	module worklib.bits:v
+		errors: 0, warnings: 0
+		Caching library 'tc240c' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  CFD2XL \dataout_reg1_reg[14]  ( .D(n3173), .CP(clk), .CD(n4415), .QN(n37) );
+                              |
+ncelab: *W,CUVWSP (./bits_gates.v,4470|30): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[13]  ( .D(n3174), .CP(clk), .CD(n4415), .QN(n38) );
+                              |
+ncelab: *W,CUVWSP (./bits_gates.v,4471|30): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[12]  ( .D(n3175), .CP(clk), .CD(n4415), .QN(n39) );
+                              |
+ncelab: *W,CUVWSP (./bits_gates.v,4472|30): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[11]  ( .D(n3176), .CP(clk), .CD(n4415), .QN(n40) );
+                              |
+ncelab: *W,CUVWSP (./bits_gates.v,4473|30): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[10]  ( .D(n3177), .CP(clk), .CD(n4415), .QN(n41) );
+                              |
+ncelab: *W,CUVWSP (./bits_gates.v,4474|30): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[9]  ( .D(n3178), .CP(clk), .CD(n4415), .QN(n42) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4475|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[8]  ( .D(n3179), .CP(clk), .CD(n4415), .QN(n43) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4476|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[7]  ( .D(n3180), .CP(clk), .CD(n4415), .QN(n44) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4477|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[6]  ( .D(n3181), .CP(clk), .CD(n4415), .QN(n45) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4478|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[5]  ( .D(n3182), .CP(clk), .CD(n4415), .QN(n46) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4479|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[4]  ( .D(n3183), .CP(clk), .CD(n4415), .QN(n47) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4480|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[3]  ( .D(n3184), .CP(clk), .CD(n4415), .QN(n48) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4481|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[2]  ( .D(n3185), .CP(clk), .CD(n4415), .QN(n49) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4482|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[1]  ( .D(n3186), .CP(clk), .CD(n4415), .QN(n50) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4483|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+  CFD2XL \dataout_reg1_reg[0]  ( .D(n3187), .CP(clk), .CD(n4415), .QN(n51) );
+                             |
+ncelab: *W,CUVWSP (./bits_gates.v,4484|29): 1 output port was not connected:
+ncelab: (/apps/toshiba/sjsu/verilog/tc240c/CFD2XL.tsbvlibp,7): Q
+
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.test:sv <0x096dd7a0>
+			streams:  23, words: 25598
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                        Instances  Unique
+		Modules:                    24038      54
+		UDPs:                       14446       6
+		Primitives:                107671       9
+		Timing outputs:             22989      30
+		Registers:                   1116      39
+		Scalar wires:               24087       -
+		Expanded wires:                36       2
+		Always blocks:                  1       1
+		Initial blocks:                 6       6
+		Clocking blocks:                1       1
+		Pseudo assignments:             5       5
+		Timing checks:               9828    4371
+		SV Class declarations:          1       1
+		SV Class specializations:       1       1
+		Simulation timescale:        10ps
+	Writing initial simulation snapshot: worklib.test:sv
+Loading snapshot worklib.test:sv .................... Done
+SVSEED default: 1
+ncsim> source /apps/cadence/INCISIV141/tools/inca/files/ncsimrc
+ncsim> run
+ 
+ 
+all done with a smile
+ 
+ 
+Simulation complete via $finish(1) at time 6594750 PS + 0
+./tbits.sv:182 $finish();
+ncsim> exit
