@@ -4,7 +4,7 @@
 // Engineer: Praveen Waliitagi	
 // 
 // Create Date:    03:50:18 02/23/2015 
-// Design Name: Variable Serial to Parallel Converter
+// Design Name: Variable Parallel to Serial Converter
 // Module Name:    bits
 // Project Name: 
 // Target Devices: 
